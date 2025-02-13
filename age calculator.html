@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <body>
+            <div id="id" >
+                
+                <h2>Enter the age of a person.</h2>
+                    
+                    <input type="number" id="ageinput" placeholder="enter age">
+             
+            
+            <button onclick="age()">view</button>
+            <p id="output"></p>
+        </div>
+            <script>
+                function age(){
+                    let x=document.getElementById("ageinput").value;
+                   let text="";
+                if(x>=1 && x<=12){
+                    text="child";
+                }
+                else if(x>=13 && x<=19){
+                    text="teenage";
+                }
+                else if(x>=20 && x<=35){
+                    text="Young";
+                }
+                else 
+                {
+                    text="Old";
+                }
+                document.getElementById("output").innerHTML=text;
+            }
+            </script>
+        </body>
+    </head>
+</html>

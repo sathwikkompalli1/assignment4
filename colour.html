@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <body id="adi">
+            <div class="button" style="display: flex; justify-content: center;font-size: 100px;">
+                <button style="font-size: 100px;" onclick="bg()">Click me</button>
+            </div>
+            <script >
+                function bg(){
+                    let colors = ["skyblue", "green", "yellow", "red", "pink","Blue"];
+                    let k=colors[Math.floor(Math.random()*colors.length)];
+                    document.getElementById("adi").style.backgroundColor=k;
+                }
+                
+            </script>
+        </body>
+    </head>
+</html>

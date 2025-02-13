@@ -1,0 +1,59 @@
+<html>
+    <head>   </head>
+        <body>
+<form>
+    <h2>
+        Student Marks details
+    </h2>
+    <div id="id">
+        <input type="text" id="name" placeholder="Enter Name" style="border-radius:10px;font-size: 30px;padding: 10px;"><br><br>
+        <input type="number" id="sub" placeholder="Enter maths marks" style="border-radius:10px;font-size: 20px;padding: 10px"><br><br>
+        <input type="number" id="sub1" placeholder="Enter science marks" style="border-radius:10px;font-size: 20px;padding: 10px"><br><br>
+        <input type="number" id="sub2" placeholder="Enter english marks" style="border-radius:10px;font-size: 20px;padding: 10px"><br><br>
+        <input type="number" id="sub3" placeholder="Enter hindi marks" style="border-radius:10px;font-size: 20px;padding: 10px"><br><br>
+        <input type="number" id="sub4" placeholder="Enter social marks" style="border-radius:10px;font-size: 20px;padding: 10px"><br><br>
+
+    </div>
+</form>
+<button onclick="result()" style="font-size: 20px;padding: 10px">Grade </button>
+<p id="n"></p>
+    <p id="tot"></p>
+<p id="Output"></p>
+<script>
+    function result(){
+    let name=document.getElementById("name").value;
+    let b=parseFloat(document.getElementById("sub").value)||0;
+    let c=parseFloat(document.getElementById("sub1").value)||0;
+    let d=parseFloat(document.getElementById("sub2").value)||0;
+    let e=parseFloat(document.getElementById("sub3").value)||0;
+    let f=parseFloat(document.getElementById("sub4").value)||0;
+    let Name="name";
+    let grade="";
+    let total=b+c+d+e+f;
+    if(total<=500 && total>=400){
+        grade="A";
+    }
+    else if(total<400 && total>350){
+        grade="B";
+
+    }
+    else if(total<=350 && total>400){
+        grade="C";
+    }
+    else if(total>100 && total<=200){
+        grade="D";
+    }
+    else{
+        grade="Fail";
+    }
+    document.getElementById("tot").innerHTML=`Total Marks:${total}`;
+
+    document.getElementById("Output").innerHTML=`Grade:${grade}`;
+    document.getElementById("n").innerHTML=`Name:${name}`;
+
+}
+</script>
+        </body>
+ 
+    
+</html>
